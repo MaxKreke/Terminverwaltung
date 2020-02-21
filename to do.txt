@@ -1,0 +1,12 @@
+check validity										x
+konsolenbedienung
+kollisionskontrolle
+ausgabe vergangener termine
+ausgabe zukünftiger termine
+ausgabe termine an einem tag
+ausgabe termine in einer zeitspanne
+
+
+jetzt erfassen
+sichergehen dass termine organisiert werden kann
+termine in datenstruktur:	set	speichern				
