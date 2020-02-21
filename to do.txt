@@ -1,13 +1,12 @@
 ﻿second constructor for termin mit duration						x
 check validity										x
 konsolenbedienung									
-kollisionskontrolle									
+kollisionskontrolle
+jetztigen zeitpunkt erfassen										
 ausgabe vergangener termine								
 ausgabe zukünftiger termine								
 ausgabe termine an einem tag								
 ausgabe termine in einer zeitspanne							
-
-
-jetztigen zeitpunkt erfassen								
-sichergehen dass termine organisiert werden kann					
+							
+sichergehen dass termine organisiert werden können					
 termine in datenstruktur:	set?	speichern					

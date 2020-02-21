@@ -4,7 +4,7 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
           [
               _Ty=Termin
           ]
-  c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\termin.h(13): note: kann "bool Termin::operator <(Termin &)" sein
+  c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\termin.h(14): note: kann "bool Termin::operator <(Termin &)" sein
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\system_error(319): note: oder "bool std::operator <(const std::error_condition &,const std::error_condition &) noexcept"
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\system_error(312): note: oder "bool std::operator <(const std::error_code &,const std::error_code &) noexcept"
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstddef(141): note: bei Anpassung der Argumentliste "(const _Ty, const _Ty)"
@@ -42,13 +42,12 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
               _Pr=std::less<Termin>,
               _Alloc=std::allocator<Termin>
           ]
-  c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\kalender.h(11): note: Siehe Verweis auf die Klasse Vorlage-Instanziierung "std::set<Termin,std::less<_Kty>,std::allocator<_Kty>>", die kompiliert wird.
+  c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\kalender.h(15): note: Siehe Verweis auf die Klasse Vorlage-Instanziierung "std::set<Termin,std::less<_Kty>,std::allocator<_Ty>>", die kompiliert wird.
           with
           [
-              _Kty=Termin
+              _Kty=Termin,
+              _Ty=Termin
           ]
-  time.cpp
-c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\time.cpp(23): warning C4244: "+=": Konvertierung von "unsigned __int64" in "unsigned int", möglicher Datenverlust
-c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\time.cpp(160): warning C4244: "Argument": Konvertierung von "const unsigned __int64" in "const unsigned short", möglicher Datenverlust
-c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\time.cpp(160): warning C4244: "Argument": Konvertierung von "const unsigned long" in "const unsigned short", möglicher Datenverlust
+  Termin.cpp
+  Terminverwaltung.cpp
   Code wird generiert...

@@ -17,7 +17,7 @@ public:
 private:
     Time m_t_start;
     Time m_t_end;
-    int m_durationInMinutes;
+    long long m_durationInMinutes;
     string m_bescreibung;
 };
 
