@@ -2,7 +2,8 @@
 check validity										x
 konsolenbedienung									
 kollisionskontrolle
-jetztigen zeitpunkt erfassen										
+jetztigen zeitpunkt erfassen
+ausgabe aller termine										
 ausgabe vergangener termine								
 ausgabe zukünftiger termine								
 ausgabe termine an einem tag								
