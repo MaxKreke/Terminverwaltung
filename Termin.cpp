@@ -8,7 +8,7 @@ Termin::Termin(Time start, long long duration, string beschreibung) : m_t_start(
 	m_durationInMinutes = duration;
 }
 
-bool Termin::operator<(Termin & other) {
+bool Termin::operator<(const Termin & other) const {
     return m_t_start < other.m_t_start || (m_t_start == other.m_t_start && m_t_end < m_t_end);
 }
 

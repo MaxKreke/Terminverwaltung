@@ -160,7 +160,7 @@ const unsigned long long Time::toMin() const {
 	return ((m_year * 356 + toDay(m_month, m_day)) * 24 + m_hour) * 60 + m_minute;
 }
 
-const bool Time::operator<(const Time & other) {
+const bool Time::operator<(const Time & other) const {
 	if (m_year < other.m_year) return true;
 	else if (m_year > other.m_year) return false;
 	else if (m_month < other.m_month) return true;
@@ -174,12 +174,12 @@ const bool Time::operator<(const Time & other) {
 	else return false;
 }
 
-const bool Time::operator==(const Time & other) {
+const bool Time::operator==(const Time & other) const {
 	if (m_year == other.m_year && m_month == other.m_month && m_day == other.m_day && m_hour == other.m_hour && m_minute == other.m_minute) return true;
 	else return false;
 }
 
-const bool Time::operator<=(const Time & other) {
+const bool Time::operator<=(const Time & other) const {
 	return ((*this < other)||(*this == other));
 }
 

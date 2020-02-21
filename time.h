@@ -12,9 +12,9 @@ public:
 	Time(const Time & other, unsigned long long timeShiftInMinutes);
 	void correct();
 	const unsigned long long toMin() const;
-	const bool operator<(const Time & other);
-	const bool operator<=(const Time & other);
-	const bool operator==(const Time & other);
+	const bool operator<(const Time & other) const;
+	const bool operator<=(const Time & other) const;
+	const bool operator==(const Time & other) const;
 	const bool isValid() const;
 	unsigned int m_year;
 	unsigned long m_month;

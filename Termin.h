@@ -11,7 +11,7 @@ public:
 
 	Termin(const Time start, const Time end, const string &beschreibung);
 	Termin(Time start, long long duration, string beschreibung);
-	bool operator<(Termin &other);
+	bool operator<(const Termin &other) const;
 	Termin &operator=(const Termin &other);
 	bool collidesWith(Termin & other);
 private:
