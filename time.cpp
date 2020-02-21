@@ -2,12 +2,158 @@
 
 using namespace std;
 
-Time::Time(const unsigned int year, const unsigned short month, const unsigned short day, const unsigned short hour, const unsigned short minute) {
+Time::Time(const unsigned int year, const unsigned long month, const unsigned long long day, const unsigned long long hour, const unsigned long long minute) {
 	m_year = year-1;
 	m_month = month-1;
 	m_day = day-1;
 	m_hour = hour-1;
 	m_minute = minute-1;
+}
+
+Time::Time(const Time & other, unsigned long long timeShiftInMinutes) {
+	*this = other;
+	m_minute += timeShiftInMinutes%60;
+	if (m_minute >= 60) {
+		m_hour+= m_minute / 60;
+		m_minute %= 60;
+		if (m_hour >= 24) {
+			m_day += m_hour / 24;
+			m_hour %= 24;
+			if (m_day >= 356) {
+				m_year += m_day / 356;
+				m_day %= 356;
+				if (!isValid()) {
+					correct();
+				}
+			}
+		}
+	}
+}
+
+void Time::correct() {
+	const int jan = 31, feb = 28, march = 31, april = 30, may = 31, june = 30, july = 31, aug = 31, sep = 30, oct = 31, nov = 30, dec = 31;
+	bool tooHigh = true;
+	while (tooHigh)
+	{
+		switch (m_month) {
+		case 0:
+			if (m_day < jan) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= jan;
+				m_month++;
+			}
+		case 1:
+			if (m_day < feb) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= feb;
+				m_month++;
+			}
+		case 2:
+			if (m_day < march) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= march;
+				m_month++;
+			}
+		case 3:
+			if (m_day < april) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= april;
+				m_month++;
+			}
+		case 4:
+			if (m_day < may) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= may;
+				m_month++;
+			}
+		case 5:
+			if (m_day < june) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= june;
+				m_month++;
+			}
+		case 6:
+			if (m_day < july) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= july;
+				m_month++;
+			}
+		case 7:
+			if (m_day < aug) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= aug;
+				m_month++;
+			}
+		case 8:
+			if (m_day < sep) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= sep;
+				m_month++;
+			}
+		case 9:
+			if (m_day < oct) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= oct;
+				m_month++;
+			}
+		case 10:
+			if (m_day < nov)
+			{
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= nov;
+				m_month++;
+			}
+		case 11:
+			if (m_day < dec) {
+				tooHigh = false;
+				break;
+			}
+			else {
+				m_day -= dec;
+				m_month++;
+			}
+		case 12:
+			m_year++;
+			m_month = 0;
+			break;
+		default:
+			cout << "You are off the goop on this one chief ngl" << endl;
+			break;
+		}
+	}
 }
 
 const unsigned long long Time::toMin() const {
