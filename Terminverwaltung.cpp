@@ -51,7 +51,11 @@ int main() {
     kal.insert(Termin(Time(2020, 2, 12, 12, 12), Time(2020, 2, 12, 12, 12), "asdasd"));
     kal.insert(Termin(Time(2021, 2, 12, 12, 12), Time(2022, 2, 12, 12, 12), "asdasd"));
     kal.insert(Termin(Time(2021, 2, 12, 12, 12), Time(2023, 2, 12, 12, 12), "asdasd"));
-
+    std::vector<Termin> terms;
+    kal.getList(terms);
+    for(const Termin & term: terms){
+        std::cout << term;
+    }
 	return 0;
 
 }

@@ -6,5 +6,5 @@ void Kalender::getList(std::vector<Termin> & dates) {
 }
 
 void Kalender::insert(const Termin &termin) {
-   m_dates.insert(termin);
+    m_dates.insert(termin);
 }

@@ -24,3 +24,7 @@ bool Termin::collidesWith(Termin & other) {
 	else return (other.m_t_start <= m_t_start) && m_t_start < other.m_t_end;
 
 }
+
+ostream & operator<<(ostream & stream, const Termin & term) {
+    return stream << term.m_t_start << term.m_t_end << term.m_bescreibung;
+}

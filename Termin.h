@@ -14,11 +14,12 @@ public:
 	bool operator<(const Termin &other) const;
 	Termin &operator=(const Termin &other);
 	bool collidesWith(Termin & other);
+	friend ostream & operator<<(ostream &,const Termin &);
 private:
     Time m_t_start;
     Time m_t_end;
     long long m_durationInMinutes;
     string m_bescreibung;
 };
-
+ostream & operator<<(ostream &,const Termin &);
 #endif //TERMIN_H_
