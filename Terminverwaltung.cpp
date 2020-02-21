@@ -10,7 +10,6 @@ int main()
 	set<Termin> Kalender;
 
 
-
 	
 
 	return 0;

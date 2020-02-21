@@ -9,6 +9,7 @@ using namespace std;
 class Termin {
 public:
 	Termin(Time start, Time end, string beschreibung);
+	Termin(Time start, long long duration, string beschreibung);
 	bool operator<(Termin & other);
 	Termin operator=(Termin & other);
 	bool collidesWith(Termin & other);

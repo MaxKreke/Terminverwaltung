@@ -1,1 +1,54 @@
-﻿  Terminverwaltung.vcxproj -> C:\Users\localuser\Desktop\C++ intensivkurs\Tag 7\Terminverwaltung\Debug\Terminverwaltung.exe
+﻿  Kalender.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstddef(141): error C2678: Binärer Operator "<": Es konnte kein Operator gefunden werden, der einen linksseitigen Operanden vom Typ "const _Ty" akzeptiert (oder keine geeignete Konvertierung möglich)
+          with
+          [
+              _Ty=Termin
+          ]
+  c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\termin.h(13): note: kann "bool Termin::operator <(Termin &)" sein
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\system_error(319): note: oder "bool std::operator <(const std::error_condition &,const std::error_condition &) noexcept"
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\system_error(312): note: oder "bool std::operator <(const std::error_code &,const std::error_code &) noexcept"
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstddef(141): note: bei Anpassung der Argumentliste "(const _Ty, const _Ty)"
+          with
+          [
+              _Ty=Termin
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstddef(140): note: Bei der Kompilierung von Klasse Vorlage der bool std::less<_Kty>::operator ()(const _Ty &,const _Ty &) const-Memberfunktion
+          with
+          [
+              _Kty=Termin,
+              _Ty=Termin
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(1110): note: Siehe Verweis auf die Instanziierung der gerade kompilierten Funktions-Vorlage "bool std::less<_Kty>::operator ()(const _Ty &,const _Ty &) const".
+          with
+          [
+              _Kty=Termin,
+              _Ty=Termin
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(264): note: Siehe Verweis auf die Klasse Vorlage-Instanziierung "std::less<_Kty>", die kompiliert wird.
+          with
+          [
+              _Kty=Termin
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(264): note: Weitere Informationen finden Sie in der Referenz zur Kompilierung der Variablenvorlage "const bool is_empty_v<std::less<Termin> >".
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xtree(1032): note: Siehe Verweis auf die Klasse Vorlage-Instanziierung "std::_Tree_comp_alloc<_Traits>", die kompiliert wird.
+          with
+          [
+              _Traits=std::_Tset_traits<Termin,std::less<Termin>,std::allocator<Termin>,false>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\set(55): note: Siehe Verweis auf die Klasse Vorlage-Instanziierung "std::_Tree<std::_Tset_traits<_Kty,_Pr,_Alloc,false>>", die kompiliert wird.
+          with
+          [
+              _Kty=Termin,
+              _Pr=std::less<Termin>,
+              _Alloc=std::allocator<Termin>
+          ]
+  c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\kalender.h(11): note: Siehe Verweis auf die Klasse Vorlage-Instanziierung "std::set<Termin,std::less<_Kty>,std::allocator<_Kty>>", die kompiliert wird.
+          with
+          [
+              _Kty=Termin
+          ]
+  time.cpp
+c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\time.cpp(23): warning C4244: "+=": Konvertierung von "unsigned __int64" in "unsigned int", möglicher Datenverlust
+c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\time.cpp(160): warning C4244: "Argument": Konvertierung von "const unsigned __int64" in "const unsigned short", möglicher Datenverlust
+c:\users\localuser\desktop\c++ intensivkurs\tag 7\terminverwaltung\terminverwaltung\time.cpp(160): warning C4244: "Argument": Konvertierung von "const unsigned long" in "const unsigned short", möglicher Datenverlust
+  Code wird generiert...
