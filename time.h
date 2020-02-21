@@ -9,6 +9,7 @@ class Time {
 public:
 	//Time();
 	Time(const unsigned int year, const unsigned short month, const unsigned short day, const unsigned short hour, const unsigned short minute);
+	Time(const Time & other, unsigned long long timeShiftInMinutes);
 	const unsigned long long toMin() const;
 	const bool operator<(const Time & other);
 	const bool operator<=(const Time & other);

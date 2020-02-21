@@ -10,6 +10,23 @@ Time::Time(const unsigned int year, const unsigned short month, const unsigned s
 	m_minute = minute-1;
 }
 
+Time::Time(const Time & other, unsigned long long timeShiftInMinutes) {
+	*this = other;
+	m_minute += timeShiftInMinutes;
+	if (m_minute >= 60) {
+		m_hour+= m_minute / 60;
+		m_minute %= 60;
+		if (m_hour >= 24) {
+			m_day += m_hour / 24;
+			m_hour %= 24;
+			if (m_day >= 356) {
+				m_year += m_day / 356;
+				m_day %= 356;
+			}
+		}
+	}
+}
+
 const unsigned long long Time::toMin() const {
 	return ((m_year * 356 + toDay(m_month, m_day)) * 24 + m_hour) * 60 + m_minute;
 }
